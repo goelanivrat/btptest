@@ -1,0 +1,48 @@
+<mvc:View
+    controllerName="login.login.controller.main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content >
+                        <Button text = "Load Data" press = "onLoad"></Button>
+                        <Table items="{user>/Orders/}">
+                          <columns>
+                            <Column>
+                            <Label text = "ID"></Label>
+                            </Column>  
+                            <Column>
+                            <Label text = "E-Mail"></Label>
+                            </Column>  
+                            <Column>
+                            <Label text = "First_Name"></Label>
+                            </Column>  
+                            <Column>
+                            <Label text = "Last_Name"></Label>
+                            </Column> 
+                            <Column>
+                            <Label text = "Avatar"></Label>
+                            </Column>  
+                             
+                            </columns> 
+                            <items>
+                               <ColumnListItem>
+                                 <Text text = "{user>id}"></Text>
+                                 <Text text = "{user>email}"></Text>
+                                 <Text text = "{user>first_name}"></Text>
+                                 <Text text = "{user>last_name}"></Text>
+                                 <Text text = "{user>avatar}"></Text>
+                                 </ColumnListItem>
+                                 </items>
+                        </Table> 
+                         
+                    </content >
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
